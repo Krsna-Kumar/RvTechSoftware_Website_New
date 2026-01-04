@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RvTech Software | Home</title>
+
+    <link rel="icon" href="img/min-logo.png">
+
+    <link rel="stylesheet" href="/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/css/baseStyling.css">
+    <link rel="stylesheet" href="/css/notchedNavbar.css">
+
+    <link rel="stylesheet" href="/css/aosbtn.css">
+
+</head>
+	
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXZ2T8ZTT0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WXZ2T8ZTT0');
+</script>
+<style>
+    .image-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* This keeps the aspect ratio while covering the area */
+    }
+
+    .parallax1 {
+        background-image: url("/img/Lady-coding.png");
+        height: 424px;
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .threeD-icon-horizontal,
+    .threeD-icon-diagonal,
+    .threeD-icon {
+        transition: transform 0.1s ease-out;
+        z-index: 2;
+    }
+
+    .square-container {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        /* Creates a 1:1 aspect ratio */
+        overflow: hidden;
+        background-color: #242424;
+    }
+
+    .square-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        transition: all 0.2s ease-in-out;
+        filter: drop-shadow(0px 0px 0px #242424);
+    }
+
+
+    .square-container img:hover {
+        transform: translateX(-14px);
+        filter: drop-shadow(12px -1px 0px #EA2340);
+
+    }
+
+    .parallax-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        /* Black overlay with 50% opacity */
+        z-index: 1;
+        /* Make sure the overlay is behind the content but above the background */
+    }
+
+    .roundbox-padding {
+        z-index: 2;
+        /* Ensure content is above the overlay */
+    }
+
+    .hero-content {
+        /* padding: clamp(20px, 2vw + 5rem, 100px) clamp(10px, 2vw + 3rem, 60px); */
+        padding-top: clamp(20px, 2vw + 5rem, 100px);
+    }
+
+    h1 span {
+        display: inline-block;
+    }
+
+    @media screen and (max-width: 412px) {
+        .parallax1 {
+            height: 700px;
+        }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        .row.animOn {
+            animation: fadeIn 0.9s 1;
+        }
+    }
+
+    .card {
+        min-height: 450px;
+    }
+</style>
+
+<body>
+
+    <div id="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=918510978150" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" /></a>
+    </div>
+
+
+    <div class="wrapper" style="overflow-x: hidden;">
+        <!-- Navbar Starts -->
+        <div class="container-fluid p-0 position-relative">
+            <div class="header align-items-center w-100">
+                <a href="index.html" class="logo">
+                    <div class="row logo-box align-items-center gap-1 justify-content-center">
+                        <div class="col-auto logo-svg pe-0 border-warning">
+                            <svg viewBox="0 0 68 50" fill="none" stroke="none" version="1.1"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                                <g id="layer1">
+                                    <path id="path25"
+                                        d="M18.5455 43.2L12.3636 32.4L24.7273 10.8L37.0909 10.8L30.9091 21.6L18.5455 21.6L30.9091 43.2L43.2727 43.2L37.0909 32.4L49.4545 10.8L43.2727 0L18.5455 0L0 32.4L6.18183 43.2L18.5455 43.2Z"
+                                        style="fill:#242424; fill-rule:evenodd;mix-blend-mode:normal;" />
+                                    <path id="path26" d="M0 32.4L12.3636 32.4L30.9091 0L18.5455 0L0 32.4Z"
+                                        style="fill:#EA2340; fill-rule:evenodd;mix-blend-mode:normal;"
+                                        transform="translate(37.091 21.6)" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="col-auto p-0">
+                            <span class="logo-txt">Tech Software</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <div class="navbar">
+                    <!-- Nav Rectangle SVG for over Max-width: 768px -->
+                    <svg class="position-relative down-both-round" viewBox="0 0 700 50" fill="none" stroke="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 0C0 0 28.4988 38.0627 28.4988 38.0627C34.1646 45.6298 43.0565 50.0832 52.4995 50.0832C52.4995 50.0832 275 50.0832 275 50.0832L425 50.0832C425 50.0832 647.499 50.0832 647.499 50.0832C656.942 50.0832 665.834 45.6298 671.5 38.0628C671.5 38.0628 700 0 700 0L425 0L275 0L0 0Z"
+                            style="fill:#242424;fill-rule:evenodd;mix-blend-mode:normal;" />
+                    </svg>
+                    <div class="abs-box links">
+                        <a href="index.html">Home</a>
+                        <a href="index3.html">About Us</a>
+                        <a href="ourservice.html">Services</a>
+                        <a href="portfolio.html">Products</a>
+                        <a href="underConstruction.html">Blog</a>
+                        <a href="contact.html" class="cta-extension">Let's work together<i
+                                class="bi bi-telephone-fill ms-2"></i></a>
+                    </div>
+                </div>
+
+                <div class="cta position-relative">
+                    <svg viewBox="0 0 400 58" fill="none" stroke="none" version="1.1"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                        <path id="path2"
+                            d="M400 0C400 0 58.4716 0.0100098 58.4716 0.0100098C49.0334 0.0106812 40.1463 4.45612 34.4838 12.009C34.4838 12.009 0 58 0 58L400 57.9875L400 0Z"
+                            style="fill:#ea2341;fill-rule:evenodd;mix-blend-mode:normal;" transform="scale(1 1)" />
+                    </svg>
+                    <div class="abs-box ps-3">
+                        <!--Jasveer Sir Phone Number: +91 7011308356 -->
+                        <!-- <i class="bi bi-telephone-fill mx-2"></i> -->
+                        <a href="contact.html"><i class="bi bi-telephone-fill me-2"></i>Let's work together !</a>
+                    </div>
+                </div>
+
+                <div id="toggle-button" class="toggle-btn">
+                    <a href="#"><i class="bi bi-list fs-3 text-dark float-end"></i></a>
+                </div>
+                <div id="toggle-box" class="toggle-box">
+                    <a href="index.html" class="fw-4">Home</a>
+                    <a href="index3.html" class="fw-4">About Us</a>
+                    <a href="ourservice.html" class="fw-4">Services</a>
+                    <a href="portfolio.html" class="fw-4">Portfolio</a>
+                    <a href="underConstruction.html" class="fw-4">Blog</a>
+                    <a href="contact.html" class="fw-4">Let's work together</a>
+                </div>
+                <div id="close-btn" class="close-btn text-light text-end pe-1">
+                    <a href="#" id="close-button" class="text-light" style="font-size: 18px;"><i
+                            class="bi bi-x-lg"></i></a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Navbar Ends -->
+
+        <!-- Hero Starts -->
+        <!-- <div class="container-fluid position-relative parallax1 top-0 align-content-center"
+            style="height: 100vh; background-image: url(/img/home8.jpg); overflow: hidden;"> -->
+
+
+        <div class="container-fluid position-relative parallax1 top-0 align-content-center"
+            style="height: 100vh; overflow: hidden;">
+            <!-- Background Video -->
+            <video autoplay muted loop playsinline class="position-absolute top-0 start-0 w-100 h-100"
+                style="object-fit: cover; z-index: 0;">
+                <source src="/vdo/Untitled design.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Parallax Overlay -->
+            <div class="parallax-overlay position-absolute w-100 h-100"
+                style="background-color: rgba(0, 0, 0, 0.2); z-index: 1;"></div>
+
+            <!-- Content with Parallax Effect -->
+            <div class="hero-content row gap-0 gap-md-5 roundbox-padding position-relative parallax-text"
+                style="z-index: 2;">
+                <div class="col-md-7 col-lg-7">
+                    <span class="badge bg-white bg-opacity-10 fw-5 p-2 px-3 text-light">Trusted IT Solution</span>
+                    <h1 class="text-white stagger-up-txt">We craft digital solutions with cutting-edge technology.</h1>
+                </div>
+                <div class="col-md-5 col-lg-4 align-content-center">
+                    <div class="row d-flex txt-clr-bgwhite">
+                        <div class="col-lg-6 col-auto">
+                            <span class="count span-big fw-6" data-target="68">0</span><span class="fs-4">+</span>
+                            <hr class="m-0 my-2">
+                            <h6 class="text-white">Projects Completed</h6>
+                        </div>
+                        <div class="col-lg-6 col-auto">
+                            <span class="count span-big fw-6" data-target="6">0</span><span class="fs-4">+</span>
+                            <hr class="m-0 my-2">
+                            <h6 class="text-white">Awards Winning</h6>
+                        </div>
+                    </div>
+                    <hr class="border-white">
+                    <div class="btn button-primary"><a href="contact.html" class="text-white">Get Started</a></div>
+                </div>
+            </div>
+            <div class="threeD-icon-diagonal position-absolute" style="right: 10%; bottom: 0%;">
+                <img src="/img/Billy 33.png" style="transform: scale(-1, 1);" width="250" alt="">
+            </div>
+        </div>
+
+
+        <!-- Hero Ends -->
+
+        <!-- Our services Starts -->
+        <section class="section-pad-both bg-clr-grey">
+            <div class="container">
+                <div class="row flex-column gap-3">
+                    <div class="col">
+                        <span class="section-title-txt badge bg-secondary bg-opacity-25 fw-5 p-2 px-3 text-light">Our
+                            Services</span>
+
+                    </div>
+                    <div class="col">
+                        <h2 class="section-title-txt txt-clr-bgwhite">What can R<span
+                                class="txt-clr-bgwhite">v</span>Tech do for you?
+                        </h2>
+                    </div>
+                </div>
+                <div class="row my-4 px-md-0 px-2">
+                    <div class="col-lg-3 col-md-6 mb-3 box-element">
+                        <div class="icon-card myrounded-5 h-100">
+                            <img src="/img/icons/connection-icon.png" class="mb-4 boxicon-width" alt="">
+                            <p class="txt-clr-bgwhite fs-5">Managed IT Service</p>
+                            <hr class="border-white">
+                            <span class="txt-clr-offwhite lh-base fw-3">Provide management and maintenance of IT
+                                infrastructure,
+                                including servers, networks, and software.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3 box-element">
+                        <div class="icon-card myrounded-5 h-100">
+                            <img src="/img/icons/Development.png" class="mb-4 boxicon-width" alt="">
+                            <p class="txt-clr-bgwhite fs-5">Software Development</p>
+                            <hr class="border-white">
+                            <span class="txt-clr-offwhite lh-base fw-3">Creating and maintaining functional and
+                                efficient
+                                software applications that address a multitude of tasks.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3 box-element">
+                        <div class="icon-card myrounded-5 h-100">
+                            <img src="/img/icons/MobileApp-min.png" class="mb-4 boxicon-width" alt="">
+                            <p class="txt-clr-bgwhite fs-5">Mobile App Development</p>
+                            <hr class="border-white">
+                            <span class="txt-clr-offwhite lh-base fw-3">Designing, developing, and maintaining custom
+                                mobile applications for Android to enhance UX & business engagement.</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3 box-element">
+                        <div class="icon-card myrounded-5 h-100">
+                            <img src="/img/icons/DB Management.png" class="mb-4 boxicon-width" alt="">
+                            <p class="txt-clr-bgwhite fs-5">Database Management</p>
+                            <hr class="border-white">
+                            <span class="txt-clr-offwhite lh-base fw-3">Designing, implementing, and managing databases,
+                                including SQL and NoSQL databases.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-center">
+                        <div class="btn btn-hover-primary border-secondary text-center border-opacity-50">
+                            <a href="ourservice.html" class="text-white">View All Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our services Ends -->
+
+        <!-- Achievements counter Starts -->
+        <section class="section-gap-both">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-lg-3 col-md-6">
+                        <span class="count span-big fw-6 txt-clr-grey" data-target="68">0</span><span
+                            class="fs-4">+</span>
+                        <span>
+                            <hr class="m-0 my-2">
+                        </span>
+                        <h6 class="txt-clr-grey">Project Completed</h6>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="count span-big fw-6 txt-clr-grey" data-target="6">0</span><span
+                            class="fs-4">+</span>
+                        <span>
+                            <hr class="m-0 my-2">
+                        </span>
+                        <h6 class="txt-clr-grey">Awards Winning</h6>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="count span-big fw-6 txt-clr-grey" data-target="99">0</span><span
+                            class="fs-4">%</span>
+                        <span>
+                            <hr class="m-0 my-2">
+                        </span>
+                        <h6 class="txt-clr-grey">Customer Satisfaction</h6>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="count span-big fw-6 txt-clr-grey" data-target="17">0</span><span
+                            class="fs-4">+</span>
+                        <span>
+                            <hr class="m-0 my-2">
+                        </span>
+                        <h6 class="txt-clr-grey">Years of Experiences</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Achievements counter Ends -->
+
+        <!-- How we do (Parallax) Starts -->
+        <section class="section-gap-both">
+            <div class="container">
+                <div class="row parallax1 myrounded-5 position-relative"
+                    style="background-image: url(img/howwedo3.jpg);">
+                    <div class="row flex-column gap-3 position-absolute roundbox-padding" style="top: 50%;
+            transform: translateY(-50%);">
+                        <div class="col">
+                            <span class="badge bg-light bg-opacity-25 fw-5 p-2 px-3 text-light">How we do</span>
+                        </div>
+                        <div class="col">
+                            <h2 class="txt-clr-bgwhite fw-5">As your devoted technology success partner, we pledge to
+                                stand
+                                by
+                                your side, ensuring that your business thrives with our unwavering support and
+                                expertise.
+                            </h2>
+                        </div>
+                        <div class="col">
+                            <a href="contact.html" class="px-3 py-2 rounded-2 text-light bg-clr-primary">Free
+                                Consultation</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How we do (Parallax) Starts -->
+
+        <!-- Portfolio Gallery Starts -->
+        <section class="section-gap-both">
+
+            <div class="container">
+                <div class="row flex-column gap-3">
+                    <div class="col">
+                        <span class="badge bg-secondary-subtle fw-5 p-2 px-3 text-black">Our Products</span>
+                    </div>
+                    <div class="col">
+                        <h2 class="txt-clr-dark">Explore our products</h2>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card myrounded-5 shadow-sm">
+                            <!-- Fixed Height Image Wrapper -->
+                            <div style="height: 200px; overflow: hidden;">
+                                <img src="/img/docusingsoftware.jpg" class="img-fluid myrounded-5"
+                                    style="object-fit: cover;" alt="Hospital Management System">
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body d-flex flex-column" style="padding: 32px;">
+                                <!-- Title -->
+                                <p class="txt-clr-dark fs-5">Hospital Management Solution</p>
+                                <hr class="border-dark m-0 pb-2">
+                                <!-- Description -->
+                                <span class="txt-clr-grey lh-base fw-3">Manages patient records, appointments, billing,
+                                    and hospital operations.</span>
+
+                                <!-- View Details Buttons -->
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <a href="hpms.html" target="_blank" class="fw-6 btn-nobg-primary">View Details ></a>
+                                    <a href="http://hpms.rvtechsoftware.com/" target="_blank" class="button-primary">Try
+                                        Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card myrounded-5 shadow-sm">
+                            <!-- Fixed Height Image Wrapper -->
+                            <div style="height: 200px; overflow: hidden;">
+                                <img src="/img/restaurentsoftware.jpg" class="img-fluid myrounded-5"
+                                    style="object-fit: cover;" alt="Restaurent & POS Management System">
+                            </div>
+
+                            <div class="card-body d-flex flex-column" style="padding: 32px;">
+                                <!-- Title -->
+                                <p class="txt-clr-dark fs-5">POS Management Solution</p>
+                                <hr class="border-dark m-0 pb-2">
+                                <!-- Description -->
+                                <span class="txt-clr-grey lh-base fw-3">Streamlines restaurant operations including
+                                    orders, inventory, and billing.</span>
+
+                                <!-- View Details Buttons -->
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <a href="http://pos.rvtechsoftware.com/" target="_blank"
+                                        class="fw-6 btn-nobg-primary">View Details ></a>
+                                    <a href="http://pos.rvtechsoftware.com/" target="_blank" class="button-primary">Try
+                                        Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="card myrounded-5 shadow-sm">
+                            <!-- Fixed Height Image Wrapper -->
+                            <div style="height: 200px; overflow: hidden;">
+                                <img src="/img/garmentsoftware.jpg" class="img-fluid myrounded-5"
+                                    style="object-fit: cover;" alt="Hospital Management System">
+                            </div>
+
+                            <div class="card-body d-flex flex-column" style="padding: 32px;">
+                                <!-- Title -->
+                                <p class="txt-clr-dark fs-5">Garment Export Manufacturing Software</p>
+                                <hr class="border-dark m-0 pb-2">
+                                <!-- Description -->
+                                <span class="txt-clr-grey lh-base fw-3">Manages garment production, inventory, and sales
+                                    for apparel businesses.</span>
+
+                                <!-- View Details Buttons -->
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <a href="http://gems.rvtechsoftware.com/" target="_blank"
+                                        class="fw-6 btn-nobg-primary">View Details ></a>
+                                    <a href="http://gems.rvtechsoftware.com/" target="_blank" class="button-primary">Try
+                                        Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Portfolio Gallery Ends -->
+
+        <!-- Why you should work with Us Section Starts -->
+        <section class="section-gap-both">
+            <div class="container">
+                <div class="row flex-column gap-3">
+                    <div class="col">
+                        <span class="badge bg-secondary-subtle fw-5 p-2 px-3 text-black">Work with us</span>
+                    </div>
+                    <div class="col">
+                        <h2 class="txt-clr-dark">Why you should work with us</h2>
+                    </div>
+                </div>
+                <div class="row mt-3 wws">
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="bg-clr-grey myrounded-5 h-100 position-relative" style="padding: 64px 42px;">
+                            <p class="txt-clr-bgwhite fs-5">Expertise</p>
+                            <span class="txt-clr-offwhite lh-base fw-3">IT companies can scale their services to meet
+                                your
+                                evolving needs, whether you're growing, downsizing, or need temporary support for
+                                specific
+                                projects.</span>
+                            <span class="span-big position-absolute text-light box-num"
+                                style="right: 8%; top: 5%">1</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="bg-clr-grey myrounded-5 h-100 position-relative" style="padding: 64px 42px;">
+                            <p class="txt-clr-bgwhite fs-5">Efficiency</p>
+                            <span class="txt-clr-offwhite lh-base fw-3">IT companies can efficiently manage and maintain
+                                your IT infrastructure, allowing you to focus on your core business operations without
+                                the
+                                distraction of IT issues.</span>
+                            <span class="span-big position-absolute text-light box-num"
+                                style="right: 8%; top: 5%">2</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="bg-clr-grey myrounded-5 h-100 position-relative" style="padding: 64px 42px;">
+                            <p class="txt-clr-bgwhite fs-5">Managed IT Service</p>
+                            <span class="txt-clr-offwhite lh-base fw-3">IT companies can scale their services to meet
+                                your
+                                evolving needs, whether you're growing, downsizing, or need temporary support for
+                                specific
+                                projects.</span>
+                            <span class="span-big position-absolute text-light box-num"
+                                style="right: 8%; top: 5%">3</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Why you should work with Us Section Ends -->
+
+
+        <!-- Trusted IT Solutions Starts (non-Parallax)-->
+        <section class="section-gap-up section-pad-both bg-clr-grey">
+            <div class="container">
+                <div class="row d-flex gap-md-0 gap-4 justify-content-between">
+                    <div class="col-md-6 p-md-4">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col position-relative">
+                                <!-- Main image -->
+                                <img src="img/ourservices3.jpg" class="w-100 h-100 myrounded-5" alt="">
+
+                                <!-- Vertical Parallax Icon -->
+                                <div class="threeD-icon position-absolute" style="right: -100px; top: 550px;"
+                                    data-offset="200">
+                                    <img src="/img/Billy 11.png" width="282" alt="">
+                                </div>
+
+                                <!-- Horizontal Parallax Icon -->
+                                <!-- <div class="threeD-icon-horizontal position-absolute" style="left:0; bottom: -30px;">
+                                <img src="/img/RvTech3D3.png" width="150" alt="">
+                            </div> -->
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 p-md-5">
+                        <div class="row flex-column gap-3">
+                            <div class="col">
+                                <span class="badge bg-secondary bg-opacity-25 fw-5 p-2 px-3 text-light">Trusted IT
+                                    Solution</span>
+                            </div>
+                            <div class="col">
+                                <h2 class="txt-clr-bgwhite">Delivering outstanding IT services since 2014</h2>
+                            </div>
+                            <div class="col">
+                                <span class="txt-clr-offwhite lh-base fw-3">We are a dynamic and forward-thinking IT
+                                    company
+                                    dedicated to transforming your digital world. With a passion for cutting-edge
+                                    solutions
+                                    and a commitment to exceptional service, we are your trusted partner in navigating
+                                    the
+                                    ever-evolving landscape of IT. Our team of skilled professionals is here to harness
+                                    the
+                                    power of technology, providing tailor-made solutions that drive your success.</span>
+                            </div>
+                            <div class="col">
+                                <hr class="my-2 border-white">
+                            </div>
+                            <div class="col pb-4">
+                                <a href="ourservice.html"
+                                    class="btn px-4 py-2 border border-white border-opacity-25 rounded-2 text-light btn-hover-primary">Our
+                                    Services</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trusted IT Solutions Ends (non-Parallax)-->
+
+
+        <!-- Our Team Starts -->
+        <section class="section-gap-both">
+            <div class="container">
+                <div class="row flex-column gap-3">
+                    <div class="col">
+                        <span class="badge bg-secondary-subtle fw-5 p-2 px-3 text-black">Our Services</span>
+                    </div>
+                    <div class="col">
+                        <h2 class="txt-clr-dark">We're a group of IT passionate</h2>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="img-card myrounded-5 square-container">
+                            <img src="/img/Team/jasveersingh2.png" class="object-fit-cover w-100 h-100 myrounded-5"
+                                alt="">
+                        </div>
+                        <h5 class="text-center mt-3">Jasveer Singh</h5>
+                        <p class="text-center">CEO + Sr. Software Engineer</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="img-card myrounded-5 square-container">
+                            <img src="/img/Team/randomperson.png" class="object-fit-cover w-100 h-100 myrounded-5"
+                                alt="">
+                        </div>
+                        <h5 class="text-center mt-3">Gaurav Gupta</h5>
+                        <p class="text-center">CTO + Sr. Software Engineer</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="img-card myrounded-5 square-container">
+                            <img src="/img/Team/mritunjaysharma.png" class="object-fit-cover w-100 h-100 myrounded-5"
+                                alt="">
+                        </div>
+                        <h5 class="text-center mt-3">Mritunjay Kumar Sharma</h5>
+                        <p class="text-center">COO + Software Engineer</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-3">
+                        <div class="img-card myrounded-5 square-container">
+                            <img src="/img/Team/randomperson2.png" class="object-fit-cover w-100 h-100 myrounded-5"
+                                alt="">
+                        </div>
+                        <h5 class="text-center mt-3">Nadeem</h5>
+                        <p class="text-center">CCO + Software Engineer</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </section>
+        <!-- Our Team Ends -->
+
+        <section class="section-gap-both">
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col-md-4 slide-in d-flex align-items-stretch mt-3 mt-md-0  position-relative">
+                        <div class="image-wrapper">
+                            <img src="/img/testim-person1.jpg" alt="Happy Lady" class="img-fluid myrounded-5">
+                        </div>
+                        <!-- <div class="threeD-icon-horizontal position-absolute">
+                            <img src="/img/3dLogo2Ortho.png" width="250" alt="">
+                        </div> -->
+                    </div>
+                    <div class="col-md-8 slide-in mt-md-0 mt-4">
+                        <div class="bg-clr-primary rect-box myrounded-5 h-100 roundbox-padding position-relative">
+                            <span class="badge bg-light bg-opacity-25 fw-5 p-2 px-3">Testimonial</span>
+                            <h2 class="fw-5 my-4" style="color:white">
+                                "We love their website designing process, The overall result was more than I expected. "
+                            </h2>
+                            <span style="color:white">Kyrstyna - Healthcare</span>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Starts -->
+        <section class="section-gap-up section-pad-up bg-clr-grey mb-0">
+            <div class="container bg-clr">
+                <div class="row gap-5">
+                    <div class="col-lg-3 ">
+                        <div class="row d-flex flex-column">
+                            <div class="col">
+                                <div class="logo-footer">
+                                    <div class="row logo-box align-items-center gap-1">
+                                        <div class="col-auto logo-svg pe-0 border-warning">
+                                            <svg viewBox="0 0 68 50" fill="none" stroke="none" version="1.1"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g id="layer1">
+                                                    <path id="path25"
+                                                        d="M18.5455 43.2L12.3636 32.4L24.7273 10.8L37.0909 10.8L30.9091 21.6L18.5455 21.6L30.9091 43.2L43.2727 43.2L37.0909 32.4L49.4545 10.8L43.2727 0L18.5455 0L0 32.4L6.18183 43.2L18.5455 43.2Z"
+                                                        style="fill:#242424;stroke-width: 1.5px; stroke: rgb(255, 255, 255); fill-rule:evenodd;mix-blend-mode:normal;" />
+                                                    <path id="path26"
+                                                        d="M0 32.4L12.3636 32.4L30.9091 0L18.5455 0L0 32.4Z"
+                                                        style="fill:#EA2340; fill-rule:evenodd;mix-blend-mode:normal;"
+                                                        transform="translate(37.091 21.6)" />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="col-auto p-0">
+                                            <span class="logo-txt text-light">Tech Software</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <hr class="text-white">
+                            </div>
+                            <div class="col">
+                                <span class="txt-clr-offwhite lh-base fw-3">We aspire to create a digital landscape
+                                    where
+                                    technology seamlessly enhances productivity, connectivity, and sustainability,
+                                    fostering
+                                    a brighter, more efficient, and inclusive future for all.</span>
+                            </div>
+
+                            <div class="col">
+                                <div class="row d-flex mt-3">
+                                    <div class="col"><a href="#"><i
+                                                class="bi bi-facebook txt-clr-primary px-1"></i></i></a>
+                                    </div>
+                                    <div class="col"><a href="#"><i class="bi bi-twitter txt-clr-primary px-1"></i></a>
+                                    </div>
+                                    <div class="col"><a href="#"><i class="bi bi-discord txt-clr-primary px-1"></i></a>
+                                    </div>
+                                    <div class="col"><a href="#"><i
+                                                class="bi bi-instagram txt-clr-primary px-1"></i></a>
+                                    </div>
+                                    <div class="col"><a href="https://www.youtube.com/watch?v=mkEa-9MwxCM&t=1s"><i
+                                                class="bi bi-youtube txt-clr-primary px-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="row">
+                            <div class="col">
+                                <p class="txt-clr-bgwhite fs-5">Company</p>
+                            </div>
+                        </div>
+                        <div class="row flex-column gap-2">
+                            <div class="col"><a href="index.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">Home</span></a>
+                            </div>
+                            <div class="col"><a href="ourservice.html"><span class="txt-clr-offwhite lh-base fw-3">Our
+                                        Services</span></a>
+                            </div>
+                            <div class="col"><a href="hpms.html"><span class="txt-clr-offwhite lh-base fw-3">Study
+                                        Case</span></a>
+                            </div>
+                            <div class="col"><a href="index.html"><span class="txt-clr-offwhite lh-base fw-3">About
+                                        Us</span></a>
+                            </div>
+                            <div class="col"><a href="index.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">News</span></a>
+                            </div>
+                            <div class="col"><a href="contact.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">Contact</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="row">
+                            <div class="col">
+                                <p class="txt-clr-bgwhite fs-5">Our Services</p>
+                            </div>
+                        </div>
+                        <div class="row flex-column gap-2">
+                            <div class="col"><a href="ourservice.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">Managed IT
+                                        Services</span></a></div>
+                            <div class="col"><a href="ourservice.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">Software
+                                        Development</span></a></div>
+                            <div class="col"><a href="ourservice.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">CyberSecurity
+                                        Services</span></a></div>
+                            <div class="col"><a href="ourservice.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">Database
+                                        Management</span></a></div>
+                            <div class="col"><a href="ourservice.html"><span
+                                        class="txt-clr-offwhite lh-base fw-3">Network
+                                        Services</span></a></div>
+                            <div class="col"><a href="ourservice.html"><span class="txt-clr-offwhite lh-base fw-3">Help
+                                        Desk
+                                        Support</span></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 ">
+                        <div class="row">
+                            <div class="col">
+                                <p class="txt-clr-bgwhite fs-5">Get in Touch</p>
+                            </div>
+                        </div>
+                        <div class="row flex-column gap-4">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-auto"><i class="bi bi-phone txt-clr-primary fs-1"></i></div>
+                                    <div class="col"><span class="txt-clr-bgwhite fs-6">Phone</span> <br>
+                                        <span class="txt-clr-offwhite lh-base fw-3">+91 7011308356</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-auto"><i class="bi bi-envelope-at txt-clr-primary fs-1"></i></div>
+                                    <div class="col"><span class="txt-clr-bgwhite fs-6">Email</span> <br>
+                                        <span class="txt-clr-offwhite lh-base fw-3">info.rvtechsoftware@gmail.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-auto"><i class="bi bi-crosshair txt-clr-primary fs-1"></i></div>
+                                    <div class="col"><span class="txt-clr-bgwhite fs-6">Address</span> <br>
+                                        <span class="txt-clr-offwhite lh-base fw-3">Vasundhara, Ghaziabad, UP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <hr class="border-white ">
+            </div>
+            <div class="container pb-3">
+                <div class="row justify-content-between">
+                    <div class="col-auto">
+                        <span class="txt-clr-bgwhite fw-3 text-center mb-0 pb-0">© Copyright 2025 - RVTech
+                            Software</span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="txt-clr-bgwhite fw-3 text-center mb-0 pb-0"><a href="#"
+                                class="txt-clr-bgwhite">Terms & Conditions</a> | <a href="#"
+                                class="txt-clr-bgwhite">Privacy Policy</a></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Ends -->
+
+    </div>
+
+    <script src="gsap/gsap.min.js"></script>
+    <script src="gsap/ScrollTrigger.min.js"></script>
+
+    <script>
+        // Adding a parallax effect to the .parallax-text class
+        window.addEventListener('scroll', function () {
+            const parallaxText = document.querySelector('.parallax-text');
+            const scrollPosition = window.pageYOffset;
+
+            // Adjust the parallax speed (can be fine-tuned)
+            const parallaxSpeed = 0.8;
+
+            // Apply translateY based on scroll position
+            parallaxText.style.transform = `translateY(${scrollPosition * parallaxSpeed}px)`;
+        });
+
+    </script>
+
+    
+
+
+    <!-- <script src="/js/animationOnScroll.js"></script> -->
+    <script src="/js/ToggleBtn.js"></script>
+    <script src="/js/HeaderChangeBG.js"></script>
+    <script src="js/gsap.js"></script>
+
+    <script src="js/counterup.min.js"></script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            // Handle vertical parallax for .threeD-icon
+            const verticalIcons = document.querySelectorAll('.threeD-icon');
+            const scrollPositionY = window.pageYOffset;
+
+            verticalIcons.forEach(icon => {
+                const offset = icon.getAttribute('data-offset') || 0;
+                const translateYValue = (scrollPositionY - offset) * -0.3; // Adjust vertical movement
+                icon.style.transform = `translateY(${translateYValue}px)`;
+            });
+
+            // Handle horizontal parallax for .threeD-icon-horizontal
+            const horizontalIcons = document.querySelectorAll('.threeD-icon-horizontal');
+
+            horizontalIcons.forEach(icon => {
+                const offset = icon.getAttribute('data-offset') || 0;
+                const translateXValue = (scrollPositionY - offset) * -0.3; // Adjust horizontal movement
+                icon.style.transform = `translateX(${translateXValue}px)`;
+            });
+
+            // Handle diagonal parallax for .threeD-icon-diagonal
+            const diagonalIcons = document.querySelectorAll('.threeD-icon-diagonal');
+
+            diagonalIcons.forEach(icon => {
+                const offset = icon.getAttribute('data-offset') || 0;
+                const translateValue = (scrollPositionY - offset) * -0.5; // Adjust diagonal movement
+
+                // Apply both horizontal and vertical movement for a diagonal effect
+                icon.style.transform = `translate(${translateValue}px, ${translateValue}px)`;
+            });
+
+        });
+    </script>
+</body>
+
+</html>
